@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace LesleyX\Events;
 
 abstract class Event
 {
