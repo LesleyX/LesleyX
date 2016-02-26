@@ -2,9 +2,11 @@
 
 namespace LesleyX\Http\Controllers;
 
-use Auth;
-use LesleyX\User;
 use Illuminate\Http\Request;
+
+use LesleyX\Http\Requests;
+use LesleyX\Http\Controllers\Controller;
+
 
 class AuthController extends Controller
 {
