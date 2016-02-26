@@ -10,7 +10,8 @@
 	<!-- Typekit Fonts -->
 	<script src="//use.typekit.net/udt8boc.js"></script>
 	<script>try{Typekit.load();}catch(e){}</script>
-
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" href="{{ asset('/sass/app.scss') }}" >
 
 
