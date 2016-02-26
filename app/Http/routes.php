@@ -53,4 +53,9 @@ Route::group(['middleware' => ['web']], function () {
         'uses' => '\LesleyX\Http\Controllers\AuthController@postLogIn',
         'middleware' => ['guest']
     ]);
+
+    Route::get('/logout', [
+        'uses'  =>  '\LesleyX\Http\Controllers\AuthController@logout',
+        'as'    =>  'auth.logout'
+    ]);
 });
