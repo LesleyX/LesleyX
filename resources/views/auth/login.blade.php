@@ -1,9 +1,9 @@
 @extends('layouts.master')
  
 @section('content')
-    <h3><a href={{ route('index') }}> Prego - Project Management App for Human Beings </a></h3>
+    <h3><a href={{ route('index') }}> LesleyX - Project Management App</a></h3>
  
-    <h3>Sign in</h3>
+    <h4>Sign in</h4>
     <div class="row">
         <div class="col-lg-6">
             <form class="form-vertical" role="form" method="post" action="{{ route('auth.login') }}">
