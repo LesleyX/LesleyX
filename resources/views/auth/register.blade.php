@@ -9,11 +9,11 @@
 		<div class="col-lg-6">
 			<form class="form-vertical" role="form" method="post" action="{{ route('auth.register') }}">
 				<div class="form-group{{ $errors->has('email') ? 'has-error' : '' }}">
-					<label for="email" class="form-control" id="email" value="{{ old('email') ?: '' }}"></label>
-					<input type="text">
-					@if($errors->has('email'))
-						<span class="help-block">{{ $errors->first('email') }}</span>
-					@endif
+                    <label for="email" class="control-label">Email</label>
+                    <input type="text" name="email" class="form-control" id="email">
+                    @if ($errors->has('email'))
+                        <span class="help-block">{{ $errors->first('email') }}</span>
+                    @endif
 				</div>
 				<div class="form-group{{ $errors->has('username') ? 'has-error' : '' }}">
                     <label for="username" class="control-label">Choose a username</label>
