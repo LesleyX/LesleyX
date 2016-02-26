@@ -58,4 +58,6 @@ Route::group(['middleware' => ['web']], function () {
         'uses'  =>  '\LesleyX\Http\Controllers\AuthController@logout',
         'as'    =>  'auth.logout'
     ]);
+
+    Route::resource('projects', 'ProjectsController');
 });
