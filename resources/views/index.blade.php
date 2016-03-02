@@ -2,24 +2,43 @@
 
 @section('content')
 
-@include('layouts.partials.sidebar')
-  
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">  
-    @include('layouts.partials.alerts')   
-    <h1 class="page-header">Dashboard</h1>
+@if(!Auth::check())
+  <h1>LesleyX Project Management</h1>
 
-    <h2 class="sub-header">Projects</h2>
+  <p>LesleyX</p>
 
-    <div class-"col-lg-6">     
-      @if($project)
+  <p><img src="{{ asset('images/lxpm.gif') }}" alt=""></p>
 
-      @endif
+  <a class="btn btn-large btn-info" href="auth/register">Register</a>
 
-      @if($project->isEmpty())
-        <h3>No Projects to display</h3>
-      @endif
+  <p class="login">Already a member? <a class="btn btn-large btn-info" href="auth/signin">Login</a></p>
+@endif
+
+@if(Auth::check())
+  <div class="container-fluid">
+    <div class="row">
+      @include('layouts.partials.sidebar')
+       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">  
+        @include('layouts.partials.alerts')   
+        <h1 class="page-header">Dashboard</h1>
+
+        <h2 class="sub-header">Projects</h2>
+
+        <div class-"col-lg-6">     
+          @if($project)
+
+          @endif
+
+          @if($project->isEmpty())
+            <h3>No Projects to display</h3>
+          @endif
+        </div>
+
+        <a class="btn btn-info" href="{{ route('projects.create') }}">New Project</a>
+      </div>
     </div>
-
-    <a class="btn btn-info" href="{{ route('projects.create') }}">New Project</a>
   </div>
+@endif
+  
+ 
 @stop
