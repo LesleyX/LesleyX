@@ -2,10 +2,9 @@
 
 namespace LesleyX\Http\Controllers;
 
+use Auth;
+use LesleyX\User;
 use Illuminate\Http\Request;
-
-use LesleyX\Http\Requests;
-use LesleyX\Http\Controllers\Controller;
 
 
 class AuthController extends Controller
@@ -48,10 +47,9 @@ class AuthController extends Controller
  
         $authStatus = Auth::attempt($request->only(['email', 'password']), $request->has('remember'));
         if (!$authStatus) {
-            return redirect()->back()->with('info', 'Invalid Email or Password');
+            return redirect()->back()->with('warning', 'Invalid Email or Password');
         }
- 
-        return redirect()->route('index')->with('info', 'You have been successfully signed in');
+        return redirect()->route('projects.index')->with('info', 'You are now signed in');
     }
 
     public function logOut()
