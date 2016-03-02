@@ -36,3 +36,4 @@ class User extends Model implements AuthenticatableContract,
     public function getAvatarUrl(){
         return "http://www.gravatar.com/avatar/" . md5(strtolower(trim($this->email))) . "?d=mm&s=40";
     }
+}
