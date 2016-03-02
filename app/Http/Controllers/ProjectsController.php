@@ -4,6 +4,7 @@ namespace LesleyX\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use LesleyX\Project;
 use LesleyX\Http\Requests;
 use LesleyX\Http\Controllers\Controller;
 
@@ -16,7 +17,8 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-       //
+       $projects = Projects::all();
+       return view('projects.index')->withProject($projects);
     }
  
     /**
@@ -26,7 +28,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+        return view('projects.new')
     }
  
     /**
