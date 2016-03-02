@@ -15,6 +15,12 @@ class Kernel extends HttpKernel
      */
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        \LesleyX\Http\Middleware\EncryptCookies::class,
+         \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        \LesleyX\Http\Middleware\VerifyCsrfToken::class,
+        //\Unicodeveloper\Session\Middleware\SessionTimeout::class,
     ];
 
     /**
