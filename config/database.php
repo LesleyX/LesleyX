@@ -53,16 +53,17 @@ return [
         ],
 
         'mysql' => [
-            'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'lesleyx'),
-            'username'  => env('DB_USERNAME', 'root'),
-            'password'  => env('DB_PASSWORD', 'Sw0rdf!sh'),
-            'charset'   => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix'    => '',
-            'strict'    => false,
-            'engine'    => null,
+            'driver'        => 'mysql',
+            'unix_socket'   => env('UNIX_SOCKET'),
+            'host'          => env('DB_HOST'),
+            'database'      => env('DB_DATABASE'),
+            'username'      => env('DB_USERNAME'),
+            'password'      => env('DB_PASSWORD'),
+            'charset'       => 'utf8',
+            'collation'     => 'utf8_unicode_ci',
+            'prefix'        => '',
+            'strict'        => false,
+            'engine'        => null,
         ],
 
         'pgsql' => [
