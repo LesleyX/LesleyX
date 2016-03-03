@@ -18,7 +18,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-       $projects = Project::all();
+       $projects = Project::personal()->get();
        return view('projects.index')->withProject($projects);
     }
  
