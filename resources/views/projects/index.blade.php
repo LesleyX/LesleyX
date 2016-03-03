@@ -27,13 +27,12 @@
 			</div>
 		@endif
 	</div>
-	@if($project->isEmpty())
-		<h3>No Projects to display</h3>
-	@endif
-</div>
-
-<div class="container">
-	<a class="btn btn-info" href="{{ route('projects.create') }}">New Project</a>
+		@if($project->isEmpty())
+			<h3>No Projects to display</h3>
+		@endif
+	<div class="container">
+		<a class="btn btn-info" href="{{ route('projects.create') }}">New Project</a>
+	</div>
 </div>
 
 @stop
