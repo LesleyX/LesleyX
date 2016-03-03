@@ -33,7 +33,7 @@
 </div>
 
 <div class="container">
-	<a href="{{ route('projects.create') }}">New Project</a>
+	<a class="btn btn-info" href="{{ route('projects.create') }}">New Project</a>
 </div>
 
 @stop
